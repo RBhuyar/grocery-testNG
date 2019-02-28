@@ -1,4 +1,4 @@
-package com.shoppingPortal;
+package main.java.com.shoppingPortal;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,10 +13,10 @@ public class TestcaseProduct {
 
 	WebDriver driver;
 
-	@BeforeMethod
+	@BeforeMethod(groups = { "include-test-one" })
 	public void setup() {
 		// Launch Application
-		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver(); // Launch
 
 		driver.manage().window().maximize();
@@ -26,30 +26,30 @@ public class TestcaseProduct {
 		driver.get("https://www.bigbasket.com");
 	}
 
-	@Test(priority=1)
+	@Test(priority=1,groups = { "include-test-one" })
 	public void searchitem() {
 		driver.findElement(By.xpath("//input[@class='form-control ng-pristine ng-untouched ng-valid ng-empty']"))
 				.sendKeys("sugar");
 	}
 
-	@Test(priority=2,dependsOnMethods="searchitem")
+	@Test(priority=2,dependsOnMethods="searchitem",groups = { "include-test-one" })
 	public void getitem() {
 		driver.findElement(By.xpath("//button[@class='btn btn-default bb-search']")).click();
 
 	}
 
-	@Test(priority=3,dependsOnMethods="getitem")
+	@Test(priority=3,dependsOnMethods="getitem",groups = { "include-test-one" })
 	public void launchitem() {
 		driver.findElement(By.linkText("Refined Sugar")).click();
 	}
 
-	@Test(priority=4,dependsOnMethods="launchitem")
+	@Test(priority=4,dependsOnMethods="launchitem",groups = { "include-test-one" })
 	public void addbasket() {
 		driver.findElement(By.xpath("//button[@class='fade sc-bbmXgH cEBnvi']")).click();
 
 	}
 
-	@AfterMethod
+	@AfterMethod(groups = { "include-test-one" })
 	public void tearDown() {
 		driver.quit();
 	}

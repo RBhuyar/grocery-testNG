@@ -1,0 +1,13 @@
+sudo: required
+services:
+  -'selenium-webdriver'
+
+before_install: true
+install: true
+  - "Build script for the app"
+script:
+  - mvn test
+addons:
+  sauce_connect:
+    username: "Your Sauce Labs username"
+    access_key: "Your Sauce Labs access key"

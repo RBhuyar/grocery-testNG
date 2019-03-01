@@ -4,10 +4,10 @@ services:
 
 before_install: true
 install: true
-  - "Build script for the app"
+
 script:
   - mvn test
 addons:
   sauce_connect:
-    username: "Your Sauce Labs username"
-    access_key: "Your Sauce Labs access key"
+    username: "RBhuyar"
+    access_key: "09fea2fb-94b7-4093-b714-e9fda7c80b6f"

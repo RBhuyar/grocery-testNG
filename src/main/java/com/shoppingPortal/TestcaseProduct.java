@@ -16,7 +16,7 @@ public class TestcaseProduct {
 	@BeforeMethod(groups = { "include-test-one" })
 	public void setup() {
 		// Launch Application
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "chromedriver_linux64.exe");
 		driver = new ChromeDriver(); // Launch
 
 		driver.manage().window().maximize();

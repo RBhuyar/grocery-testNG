@@ -5,8 +5,8 @@ env:
  - SKIP_LOCAL_BROWSERS=true
 addons:
   sauce_connect:
-    username: "RBhuyar"
-    access_key: "09fea2fb-94b7-4093-b714-e9fda7c80b6f"
+    username: {$username}
+    access_key: {$access_key}
     apt:
       sources:
         - google-chrome

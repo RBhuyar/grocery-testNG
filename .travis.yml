@@ -1,17 +1,6 @@
 sudo: required
 services:
   -'selenium-webdriver'
-
-before_install:
-  - wget http://chromedriver.storage.googleapis.com/2.26/chromedriver_linux64.zip
-
-  - unzip chromedriver_linux64.zip -d /home/travis/build/RBhuyar/grocery-testNG/
-
-
-install: true
-
-script:
-  - mvn test
 env:
  - SKIP_LOCAL_BROWSERS=true
 addons:
@@ -23,3 +12,14 @@ addons:
         - google-chrome
       packages:
         - google-chrome-stable
+
+before_install:
+  - wget http://chromedriver.storage.googleapis.com/2.26/chromedriver_linux64.zip
+
+  - unzip chromedriver_linux64.zip -d /home/travis/build/RBhuyar/grocery-testNG/
+
+
+install: true
+
+script:
+  - mvn test

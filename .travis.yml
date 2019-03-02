@@ -3,7 +3,7 @@ services:
   -'selenium-webdriver'
 
 before_install:
-  - wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
+  - wget http://chromedriver.storage.googleapis.com/2.26/chromedriver_linux64.zip
 
   - unzip chromedriver_linux64.zip -d /home/travis/build/RBhuyar/grocery-testNG/
 

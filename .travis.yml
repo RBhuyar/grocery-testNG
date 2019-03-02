@@ -9,12 +9,18 @@ before_install:
 
 
 install:
-  - sudo Xvfb :10 -ac
-  - export DISPLAY=:10
+  - xvfb-run wct --skip-plugin local
 
 script:
   - mvn test
+env:
+
 addons:
   sauce_connect:
     username: "RBhuyar"
     access_key: "09fea2fb-94b7-4093-b714-e9fda7c80b6f"
+    apt:
+      sources:
+        - google-chrome
+      packages:
+        - google-chrome-stable

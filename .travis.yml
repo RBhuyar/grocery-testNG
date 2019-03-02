@@ -7,13 +7,12 @@ before_install:
 
   - unzip chromedriver_linux64.zip -d /home/travis/build/RBhuyar/grocery-testNG/
 
-install:
-  - cd /home/travis/build/RBhuyar/grocery-testNG/chromedriver
-  - ls -la
+
+install: true
 
 script:
   - mvn test
 addons:
   sauce_connect:
-    username: "="
-    access_key: "="
+    username: "RBhuyar"
+    access_key: "09fea2fb-94b7-4093-b714-e9fda7c80b6f"

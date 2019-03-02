@@ -8,7 +8,7 @@ before_install:
   - unzip chromedriver_linux64.zip -d /home/travis/build/RBhuyar/grocery-testNG/
 
 install:
-  - cd /home/travis/build/RBhuyar/grocery-testNG/
+  - cd /home/travis/build/RBhuyar/grocery-testNG/chromedriver
   - ls -la
 
 script:

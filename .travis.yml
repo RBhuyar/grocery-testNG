@@ -8,8 +8,7 @@ before_install:
   - unzip chromedriver_linux64.zip -d /home/travis/build/RBhuyar/grocery-testNG/
 
 
-install:
-  - xvfb-run wct --skip-plugin local
+install: true
 
 script:
   - mvn test

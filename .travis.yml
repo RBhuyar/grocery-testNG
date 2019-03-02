@@ -9,7 +9,7 @@ before_install:
 
 
 install:
-  - nohup sudo Xvfb :10 -ac
+  - sudo apt-get install xvfb
   - export DISPLAY=:10
 
 script:

@@ -13,7 +13,7 @@ install: true
 script:
   - mvn test
 env:
-
+ - SKIP_LOCAL_BROWSERS=true
 addons:
   sauce_connect:
     username: "RBhuyar"

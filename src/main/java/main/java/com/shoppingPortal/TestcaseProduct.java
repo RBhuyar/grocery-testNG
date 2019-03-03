@@ -6,17 +6,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 public class TestcaseProduct {
 
 	WebDriver driver;
 
-	@BeforeMethod(groups = { "include-test-one" })
+	@BeforeSuite(groups = { "include-test-one" })
 	public void setup() {
 		// Launch Application
-		System.setProperty("webdriver.chrome.driver", "chromedriver");
+		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
 		driver = new ChromeDriver(); // Launch
 
 		driver.manage().window().maximize();
@@ -49,7 +51,7 @@ public class TestcaseProduct {
 
 	}
 
-	@AfterMethod(groups = { "include-test-one" })
+	@AfterSuite(groups = { "include-test-one" })
 	public void tearDown() {
 		driver.quit();
 	}
